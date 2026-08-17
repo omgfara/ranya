@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranya Tajmer</title>
+<meta name="description" content="Odbrojavanje do povratka Ranye iz Njemačke u Mostar — uživo, s ljubavlju.">
+<meta property="og:title" content="Ranya Tajmer">
+<meta property="og:description" content="Odbrojavanje do povratka iz Njemačke u Mostar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='24' font-size='24' text-anchor='middle'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="theme-toggle" aria-label="Promijeni temu">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <div class="bg-layer" id="bg-layer"></div>
+  <div class="parallax-layer" id="parallax-layer"></div>
+  <div class="confetti-container" id="confetti-container"></div>
+
+  <main class="container">
+    <header class="header">
+      <p class="eyebrow">✈ Putovanje u Njemačku</p>
+      <h1 class="title">Ranya <span>Tajmer</span></h1>
+    </header>
+
+    <section class="progress-section">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-label"><span id="progress-percent">0</span>% putovanja završeno</p>
+    </section>
+
+    <section class="timers">
+      <div class="timer-card">
+        <h2 class="timer-label" id="elapsed-label">Vrijeme provedeno u Njemačkoj</h2>
+        <div class="timer-display" id="elapsed-timer">
+          <div class="unit"><span id="e-days">00</span><small>dana</small></div>
+          <div class="unit"><span id="e-hours">00</span><small>sati</small></div>
+          <div class="unit"><span id="e-minutes">00</span><small>min</small></div>
+          <div class="unit"><span id="e-seconds">00</span><small>sek</small></div>
+        </div>
+      </div>
+
+      <div class="timer-card">
+        <h2 class="timer-label" id="countdown-label">Povratak u Mostar za</h2>
+        <div class="timer-display" id="countdown-timer">
+          <div class="unit"><span id="c-days">00</span><small>dana</small></div>
+          <div class="unit"><span id="c-hours">00</span><small>sati</small></div>
+          <div class="unit"><span id="c-minutes">00</span><small>min</small></div>
+          <div class="unit"><span id="c-seconds">00</span><small>sek</small></div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="location-card" id="location-card">
+      <p class="location-tag">Trenutna lokacija</p>
+      <p class="location-text" id="location-text">Učitavanje...</p>
+      <p class="clock-text" id="clock-text"></p>
+    </section>
+
+    <section class="map-card">
+      <p class="location-tag">Mapa putovanja</p>
+      <svg id="route-map" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <path id="route-path" d="M40,140 L25,110 L345,20 L305,28 L345,20 L265,45 L225,65 L65,128 L40,140"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3" opacity="0.5"/>
+        <g id="city-markers"></g>
+        <circle id="travel-dot" r="6.5" class="travel-dot"/>
+      </svg>
+    </section>
+
+    <section class="hug-card">
+      <p class="location-tag">Zagrljaja koji fale</p>
+      <p class="hug-count" id="hug-count">0</p>
+    </section>
+
+    <section class="gallery-card">
+      <p class="location-tag">Zajednička galerija</p>
+      <p class="gallery-text">Sve slike sa puta, uživo, na jednom mjestu.</p>
+      <a class="gallery-btn" id="gallery-link" href="https://photos.app.goo.gl/ZAMIJENI-OVO-LINKOM" target="_blank" rel="noopener">
+        📸 Otvori galeriju
+      </a>
+    </section>
+    
+    <footer class="dedication">
+      <p>S ljubavlju,</p>
+      <p class="signature">tvoj Fara <span class="heart">❤</span></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
